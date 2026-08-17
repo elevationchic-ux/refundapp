@@ -4,7 +4,9 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { requireSession } from "@/lib/session";
+import { requireRole, requireSession } from "@/lib/session";
+import { CLAIM_STATUSES } from "@/lib/claims";
+import type { ClaimStatus } from "@prisma/client";
 
 export type ClaimFormState = {
   error?: string;
@@ -90,4 +92,50 @@ export async function createClaim(
   revalidatePath("/dashboard");
   revalidatePath("/admin");
   redirect("/dashboard?submitted=1");
+}
+
+export async function updateClaimStatus(formData: FormData) {
+  await requireRole("ADMIN", "AGENT");
+
+  const claimId = formData.get("claimId");
+  const status = formData.get("status");
+  if (
+    typeof claimId !== "string" ||
+    typeof status !== "string" ||
+    !CLAIM_STATUSES.includes(status as ClaimStatus)
+  ) {
+    throw new Error("Paramètres invalides.");
+  }
+
+  await prisma.claim.update({
+    where: { id: claimId },
+    data: { status: status as ClaimStatus },
+  });
+
+  revalidatePath("/admin");
+  revalidatePath("/dashboard");
+}
+
+export async function assignAgent(formData: FormData) {
+  await requireRole("ADMIN");
+
+  const claimId = formData.get("claimId");
+  const agentId = formData.get("agentId");
+  if (typeof claimId !== "string" || typeof agentId !== "string") {
+    throw new Error("Paramètres invalides.");
+  }
+
+  if (agentId !== "") {
+    const agent = await prisma.user.findUnique({ where: { id: agentId } });
+    if (!agent || (agent.role !== "AGENT" && agent.role !== "ADMIN")) {
+      throw new Error("L'utilisateur sélectionné n'est pas un agent.");
+    }
+  }
+
+  await prisma.claim.update({
+    where: { id: claimId },
+    data: { agentId: agentId === "" ? null : agentId },
+  });
+
+  revalidatePath("/admin");
 }
