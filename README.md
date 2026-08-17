@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LitigeFlow — Gestion des remboursements et litiges
 
-## Getting Started
+Application Next.js (App Router) de gestion des demandes de remboursement et des litiges : soumission multi-étapes avec pièces justificatives, suivi client et back-office d'administration.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 16** (App Router, Server Actions) + **TypeScript**
+- **Tailwind CSS 4**
+- **Prisma** + **PostgreSQL**
+- Authentification par sessions JWT signées (cookie `httpOnly`), mots de passe hachés avec bcrypt
+- Rôles : `CLIENT`, `AGENT`, `ADMIN`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Fonctionnalités
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/claim/new` — tunnel de soumission en 3 étapes : informations de la transaction, upload de preuves (PNG/JPEG/WEBP/PDF, 5 fichiers max, 5 Mo chacun), récapitulatif.
+- `/dashboard` — historique des litiges du client sous forme de cartes avec badges de statut (`PENDING`, `INVESTIGATING`, `RESOLVED`, `REJECTED`).
+- `/admin` — tableau de données (tri, recherche, filtre par statut) réservé aux rôles `AGENT`/`ADMIN` : changement de statut et assignation d'agents (assignation réservée aux `ADMIN`).
+- `/login`, `/register` — authentification (inscription en tant que `CLIENT`).
+- Les pièces justificatives sont stockées en base (bytea) et servies via `/api/evidence/[id]` avec contrôle d'accès (propriétaire ou staff).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Démarrage local
 
-## Learn More
+1. Démarrer une base PostgreSQL, par exemple :
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   docker run -d --name claims-pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=claims -p 5432:5432 postgres:16-alpine
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Configurer l'environnement :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   cp .env.example .env
+   # renseigner DATABASE_URL et AUTH_SECRET (openssl rand -base64 32)
+   ```
 
-## Deploy on Vercel
+3. Installer, migrer, seeder, lancer :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   npx prisma migrate dev
+   npm run db:seed
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Comptes de démonstration (seed)
+
+| Rôle   | E-mail              | Mot de passe   |
+| ------ | ------------------- | -------------- |
+| ADMIN  | admin@example.com   | `Password123!` |
+| AGENT  | agent@example.com   | `Password123!` |
+| CLIENT | client@example.com  | `Password123!` |
+
+## Déploiement sur Vercel
+
+1. Créer une base PostgreSQL managée (Vercel Postgres/Neon, Supabase…).
+2. Importer le dépôt dans Vercel — le build exécute automatiquement `prisma generate && next build` (script `build`), et `postinstall` régénère le client Prisma.
+3. Définir les variables d'environnement du projet :
+   - `DATABASE_URL` — chaîne de connexion PostgreSQL (avec `?sslmode=require`)
+   - `AUTH_SECRET` — `openssl rand -base64 32`
+4. Appliquer les migrations sur la base de production :
+
+   ```bash
+   DATABASE_URL="postgresql://…" npx prisma migrate deploy
+   ```
+
+   (optionnel : `npm run db:seed` pour les comptes de démonstration)
+
+## Scripts
+
+| Script            | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Serveur de développement             |
+| `npm run build`   | `prisma generate` + build production |
+| `npm run lint`    | ESLint                               |
+| `npm run db:migrate` | `prisma migrate dev`              |
+| `npm run db:deploy`  | `prisma migrate deploy`           |
+| `npm run db:seed`    | Seed des données de démonstration |
