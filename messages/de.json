@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "resources": "Ressourcen",
+    "faq": "FAQ",
+    "howItWorks": "So funktioniert's",
+    "pricing": "Preise",
+    "dashboard": "Mein Konto",
+    "startClaim": "Antrag stellen",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "register": "Konto erstellen"
+  },
+  "hero": {
+    "badge": "🌍 Legale Erstattungs- & Streitplattform",
+    "title": "Erhalten Sie Ihre",
+    "titleHighlight": "Erstattung",
+    "titleEnd": "— schnell und legal",
+    "description": "Händlerstreit, Flugverspätung, Online-Betrug, Bankrückbuchung: LitigeFlow führt Sie zum richtigen Rechtsmittel und verwaltet Ihren Fall von Anfang bis Ende.",
+    "cta": "Antrag stellen",
+    "ctaSecondary": "Ressourcen ansehen",
+    "trust": "100% legaler Prozess — keine Vorauszahlungen"
+  },
+  "stats": {
+    "recovered": "Für unsere Kunden zurückgeholt",
+    "claims": "Bearbeitete Fälle",
+    "satisfaction": "Zufriedenheitsrate"
+  },
+  "categories": {
+    "title": "Welche Art von Erstattung suchen Sie?",
+    "subtitle": "Jede Situation hat ein Rechtsmittel. Wählen Sie Ihren Fall aus.",
+    "cta": "Antrag stellen",
+    "merchant": { "label": "Händlerstreit", "desc": "Artikel nicht erhalten, nicht wie beschrieben, unkooperativer Verkäufer" },
+    "flight": { "label": "Flugverspätung / -annullierung", "desc": "Bis zu 600 € Entschädigung (EU-Verordnung 261/2004)" },
+    "scam": { "label": "Online-Betrug", "desc": "Betrug, Phishing, gefälschte Website" },
+    "health": { "label": "Gesundheitserstattung", "desc": "Arztkosten, Krankenversicherung" },
+    "tax": { "label": "Steuererstattung", "desc": "Steuergutschrift, zu viel gezahlte Steuern" },
+    "crossborder": { "label": "Grenzüberschreitender Streit", "desc": "Kauf in einem anderen Land" }
+  },
+  "features": {
+    "title": "Warum LitigeFlow?",
+    "subtitle": "Eine Plattform für Verbraucher mit Zugang zu den besten Rechtswerkzeugen.",
+    "analysis": { "title": "Fallanalyse", "desc": "Unser System analysiert Ihre Situation und identifiziert das beste verfügbare Rechtsmittel." },
+    "portals": { "title": "Offizielle Portale", "desc": "Direktzugang zu AirHelp, Rückbuchungsanleitungen, Verbraucherschutzbehörden und mehr." },
+    "security": { "title": "Sichere Daten", "desc": "Ihre Dokumente sind verschlüsselt und nur für Sie und unsere Agenten zugänglich." },
+    "tracking": { "title": "Echtzeit-Verfolgung", "desc": "Kunden-Dashboard mit Ihrem Fallstatus, der bei jedem Schritt aktualisiert wird." }
+  },
+  "process": {
+    "title": "Wie funktioniert es?",
+    "subtitle": "3 einfache Schritte, um Ihren Erstattungsantrag zu starten.",
+    "step1": { "title": "Beschreiben Sie Ihre Situation", "desc": "Füllen Sie das Formular in 3 Schritten aus: Streitart, Betrag, Beweise." },
+    "step2": { "title": "Wir bereiten Ihren Fall vor", "desc": "Unsere Agenten prüfen die Dokumente und reichen den Fall bei den richtigen Stellen ein." },
+    "step3": { "title": "Verfolgung & Lösung", "desc": "Sie verfolgen den Fortschritt in Echtzeit und erhalten Ihre Erstattung." }
+  },
+  "tools": { "title": "Kostenlose Tools", "subtitle": "Schätzen Sie Ihre Erstattungschancen und verfolgen Sie Ihren Fall in Echtzeit." },
+  "testimonials": { "title": "Sie haben ihre Erstattung erhalten" },
+  "cta": {
+    "title": "Bereit, Ihr Geld zurückzubekommen?",
+    "subtitle": "Reichen Sie Ihren Fall kostenlos ein. Unsere Agenten prüfen ihn innerhalb von 24 Stunden.",
+    "button": "Kostenlos starten"
+  },
+  "orienteur": {
+    "title": "🧭 Was ist Ihr Rechtsmittel?",
+    "subtitle": "Kostenloser Leitfaden — sofortiges Ergebnis",
+    "question": "Was ist Ihre Situation?",
+    "detail": "Präzisieren Sie Ihre Situation:",
+    "results": "Ihre empfohlenen Rechtsmittel:",
+    "official": "Offiziell",
+    "cta": "Meinen Fall bei LitigeFlow einreichen"
+  },
+  "calculator": {
+    "title": "Erstattungsrechner",
+    "subtitle": "Schätzen Sie, wie viel Sie zurückbekommen könnten",
+    "amount": "Streitiger Betrag",
+    "commission": "Provisionssatz",
+    "successRate": "Erfolgswahrscheinlichkeit",
+    "estimated": "Geschätzter zurückgeholter Betrag",
+    "ourFee": "Unsere Provision",
+    "returned": "An Sie zurückgezahlter Betrag",
+    "recoveryRate": "Rückholquote",
+    "disclaimer": "Schätzung basierend auf historischen Daten. Der tatsächliche Betrag kann variieren. Keine Provision ohne erfolgreiche Rückholung."
+  },
+  "tracker": {
+    "title": "Meinen Fall verfolgen",
+    "subtitle": "Geben Sie Ihre Daten ein, um den Status Ihres Falls zu prüfen",
+    "reference": "Fallnummer",
+    "referencePlaceholder": "z.B. LF-2024-12345",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "ihre@email.de",
+    "submit": "Fall verfolgen",
+    "searching": "Suche läuft…",
+    "found": "Fall gefunden",
+    "notFound": "Fall nicht gefunden",
+    "notFoundDesc": "Bitte überprüfen Sie Ihre Fallnummer und E-Mail",
+    "status": "Status",
+    "stage": "Phase",
+    "lastUpdate": "Zuletzt aktualisiert",
+    "inProgress": "In Bearbeitung",
+    "bankLiaison": "Bankkontakt",
+    "hoursAgo": "Vor 2 Stunden",
+    "trackAnother": "Anderen Fall verfolgen",
+    "retry": "Erneut versuchen",
+    "noCase": "Noch keinen Fall?",
+    "newClaim": "Neuen Antrag stellen"
+  },
+  "chat": {
+    "title": "LITIGEFLOW ASSISTENT",
+    "subtitle": "Hilfe bei Erstattungen & Streitigkeiten",
+    "welcome": "Hallo! Ich bin Ihr LitigeFlow-Assistent. Wie kann ich Ihnen heute helfen? (Händlerstreit, Flugverspätung, Betrug…)",
+    "placeholder": "Ihre Nachricht…",
+    "autoReply": "Vielen Dank für Ihre Nachricht. Unsere Agenten werden Ihre Anfrage prüfen und sich innerhalb von 24 Stunden bei Ihnen melden."
+  },
+  "pricing": {
+    "title": "Transparente Preise",
+    "subtitle": "Wählen Sie den Plan, der zu Ihrer Situation passt. Keine Vorauszahlungen bei Provisionsplänen.",
+    "free": { "name": "Kostenlos", "price": "0 €", "period": "", "desc": "Für einfache selbstverwaltete Fälle", "features": ["Rechtsmittelleitfaden", "Zugang zum Ressourcenverzeichnis", "Vollständige FAQ", "1 aktiver Fall"] },
+    "pro": { "name": "Pro", "price": "20%", "period": "des zurückgeholten Betrags", "desc": "Vollständige Unterstützung durch unsere Agenten", "features": ["Alles aus Kostenlos", "Expertenanalyse", "Offizielle Briefentwürfe", "Bank- & Behördenkontakt", "Echtzeit-Verfolgung", "Unbegrenzte Fälle"] },
+    "premium": { "name": "Premium", "price": "49 €", "period": "/ Monat", "desc": "Für Profis und komplexe Fälle", "features": ["Alles aus Pro", "Dedizierter Agent", "24h-Priorität", "Rechtliche Partnerunterstützung", "Monatlicher Bericht", "API-Zugang"] },
+    "cta": "Starten",
+    "ctaPro": "Meinen Fall einreichen",
+    "ctaPremium": "Abonnieren",
+    "popular": "Am beliebtesten",
+    "noUpfront": "Keine Vorauszahlungen — wir werden bezahlt, wenn Sie es werden"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Erstattungen, Streitigkeiten und rechtliche Prozesse wissen müssen.",
+    "stillQuestion": "Keine Antwort gefunden?",
+    "stillDesc": "Reichen Sie Ihren Fall ein und unsere Agenten antworten innerhalb von 24 Stunden.",
+    "ctaClaim": "Meinen Fall einreichen",
+    "ctaResources": "Ressourcen ansehen"
+  },
+  "resources": {
+    "title": "Erstattungsressourcen-Verzeichnis",
+    "subtitle": "20 zuverlässige und legale Plattformen, um Ihr Geld zurückzubekommen.",
+    "search": "Plattform oder Prozess suchen…",
+    "all": "Alle",
+    "official": "Offiziell",
+    "free": "Kostenlos",
+    "noResults": "Keine Ergebnisse für",
+    "clearSearch": "Suche löschen",
+    "ctaTitle": "Persönliche Unterstützung benötigt?",
+    "ctaDesc": "Reichen Sie Ihren Fall bei LitigeFlow ein und unsere Agenten führen Sie.",
+    "ctaClaim": "Meinen Fall kostenlos einreichen",
+    "ctaFaq": "FAQ lesen"
+  },
+  "footer": {
+    "tagline": "Plattform für Erstattungs- und Streitverwaltung. 100% legaler Prozess, keine Vorauszahlungen.",
+    "gdpr": "DSGVO-konform",
+    "nav": "Navigation",
+    "services": "Dienste",
+    "contact": "Kontakt",
+    "submitClaim": "Antrag stellen",
+    "mySpace": "Mein Konto",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "legal": "Impressum",
+    "warning": "⚠️ LitigeFlow führt nur legale Prozesse durch. Jeder betrügerische Erstattungsantrag ist eine Straftat."
+  },
+  "legal": {
+    "title": "Impressum",
+    "privacy": { "title": "Datenschutzrichtlinie" },
+    "terms": { "title": "Nutzungsbedingungen" },
+    "cookies": { "title": "Cookie-Richtlinie" }
+  }
+}

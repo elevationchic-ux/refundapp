@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "resources": "Recursos",
+    "faq": "Preguntas",
+    "howItWorks": "Cómo funciona",
+    "pricing": "Precios",
+    "dashboard": "Mi cuenta",
+    "startClaim": "Presentar reclamación",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "register": "Crear cuenta"
+  },
+  "hero": {
+    "badge": "🌍 Plataforma legal de reembolsos y litigios",
+    "title": "Obtén tu",
+    "titleHighlight": "reembolso",
+    "titleEnd": "— rápido y legalmente",
+    "description": "Litigio con comerciante, retraso de vuelo, estafa online, contracargo bancario: LitigeFlow te orienta hacia el recurso legal adecuado y gestiona tu caso de principio a fin.",
+    "cta": "Presentar mi reclamación",
+    "ctaSecondary": "Ver recursos",
+    "trust": "Proceso 100% legal — sin costes anticipados"
+  },
+  "stats": {
+    "recovered": "Recuperado para nuestros clientes",
+    "claims": "Casos gestionados",
+    "satisfaction": "Tasa de satisfacción"
+  },
+  "categories": {
+    "title": "¿Qué tipo de reembolso buscas?",
+    "subtitle": "Cada situación tiene su recurso legal. Selecciona tu caso para ser orientado.",
+    "cta": "Presentar reclamación",
+    "merchant": { "label": "Litigio con comerciante", "desc": "Artículo no recibido, no conforme, vendedor que no responde" },
+    "flight": { "label": "Retraso / cancelación de vuelo", "desc": "Hasta 600 € de indemnización (Reglamento CE 261/2004)" },
+    "scam": { "label": "Estafa online", "desc": "Fraude, phishing, sitio web falso" },
+    "health": { "label": "Reembolso sanitario", "desc": "Gastos médicos, seguro de salud" },
+    "tax": { "label": "Devolución fiscal", "desc": "Crédito fiscal, impuestos pagados en exceso" },
+    "crossborder": { "label": "Litigio transfronterizo", "desc": "Compra en otro país" }
+  },
+  "features": {
+    "title": "¿Por qué LitigeFlow?",
+    "subtitle": "Una plataforma diseñada para consumidores, con acceso a las mejores herramientas legales.",
+    "analysis": { "title": "Análisis de tu caso", "desc": "Nuestro sistema analiza tu situación e identifica el mejor recurso legal disponible." },
+    "portals": { "title": "Portales oficiales", "desc": "Acceso directo a AirHelp, guías de contracargo, agencias de protección al consumidor y más." },
+    "security": { "title": "Datos seguros", "desc": "Tus documentos están cifrados y solo accesibles por ti y nuestros agentes." },
+    "tracking": { "title": "Seguimiento en tiempo real", "desc": "Panel de cliente con el estado de tu caso actualizado en cada paso." }
+  },
+  "process": {
+    "title": "¿Cómo funciona?",
+    "subtitle": "3 pasos simples para iniciar tu solicitud de reembolso.",
+    "step1": { "title": "Describe tu situación", "desc": "Rellena el formulario en 3 pasos: tipo de litigio, importe, pruebas." },
+    "step2": { "title": "Preparamos tu caso", "desc": "Nuestros agentes verifican los documentos y los envían a las partes correctas." },
+    "step3": { "title": "Seguimiento y resolución", "desc": "Sigues el progreso en tiempo real y recibes tu reembolso." }
+  },
+  "tools": { "title": "Herramientas gratuitas", "subtitle": "Estima tus posibilidades de reembolso y sigue tu caso en tiempo real." },
+  "testimonials": { "title": "Ellos obtuvieron su reembolso" },
+  "cta": {
+    "title": "¿Listo para recuperar tu dinero?",
+    "subtitle": "Presenta tu caso gratis. Nuestros agentes lo revisan en 24 horas.",
+    "button": "Empezar gratis"
+  },
+  "orienteur": {
+    "title": "🧭 ¿Cuál es tu recurso?",
+    "subtitle": "Guía gratuita — resultado inmediato",
+    "question": "¿Cuál es tu situación?",
+    "detail": "Especifica tu situación:",
+    "results": "Tus recursos recomendados:",
+    "official": "Oficial",
+    "cta": "Presentar mi caso en LitigeFlow"
+  },
+  "calculator": {
+    "title": "Calculadora de reembolso",
+    "subtitle": "Estima cuánto podrías recuperar",
+    "amount": "Importe en litigio",
+    "commission": "Tasa de comisión",
+    "successRate": "Probabilidad de éxito",
+    "estimated": "Importe estimado recuperado",
+    "ourFee": "Nuestra comisión",
+    "returned": "Importe devuelto",
+    "recoveryRate": "Tasa de recuperación",
+    "disclaimer": "Estimación basada en datos históricos. El importe real puede variar. Sin comisión si no hay recuperación."
+  },
+  "tracker": {
+    "title": "Seguir mi caso",
+    "subtitle": "Introduce tus datos para consultar el estado de tu caso",
+    "reference": "Número de caso",
+    "referencePlaceholder": "ej: LF-2024-12345",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "submit": "Seguir mi caso",
+    "searching": "Buscando…",
+    "found": "Caso encontrado",
+    "notFound": "Caso no encontrado",
+    "notFoundDesc": "Verifica tu número de caso y correo",
+    "status": "Estado",
+    "stage": "Etapa",
+    "lastUpdate": "Última actualización",
+    "inProgress": "En revisión",
+    "bankLiaison": "Enlace bancario",
+    "hoursAgo": "Hace 2 horas",
+    "trackAnother": "Seguir otro caso",
+    "retry": "Intentar de nuevo",
+    "noCase": "¿Aún no tienes caso?",
+    "newClaim": "Presentar nueva reclamación"
+  },
+  "chat": {
+    "title": "ASISTENTE LITIGEFLOW",
+    "subtitle": "Ayuda con reembolsos y litigios",
+    "welcome": "¡Hola! Soy tu asistente LitigeFlow. ¿En qué puedo ayudarte hoy? (litigio con comerciante, retraso de vuelo, estafa…)",
+    "placeholder": "Tu mensaje…",
+    "autoReply": "Gracias por tu mensaje. Nuestros agentes revisarán tu solicitud y te responderán en 24 horas."
+  },
+  "pricing": {
+    "title": "Precios transparentes",
+    "subtitle": "Elige el plan que se adapta a tu situación. Sin costes anticipados en los planes de comisión.",
+    "free": { "name": "Gratis", "price": "0 €", "period": "", "desc": "Para casos simples gestionados de forma autónoma", "features": ["Guía de recursos", "Directorio de 20+ recursos", "FAQ completa", "1 caso activo"] },
+    "pro": { "name": "Pro", "price": "20%", "period": "del importe recuperado", "desc": "Acompañamiento completo por nuestros agentes", "features": ["Todo lo del plan Gratis", "Análisis experto", "Redacción de cartas oficiales", "Enlace con bancos y autoridades", "Seguimiento en tiempo real", "Casos ilimitados"] },
+    "premium": { "name": "Premium", "price": "49 €", "period": "/ mes", "desc": "Para profesionales y casos complejos", "features": ["Todo lo del plan Pro", "Agente dedicado", "Prioridad 24h", "Asistencia jurídica", "Informe mensual", "Acceso API"] },
+    "cta": "Empezar",
+    "ctaPro": "Presentar mi caso",
+    "ctaPremium": "Suscribirse",
+    "popular": "Más popular",
+    "noUpfront": "Sin costes anticipados — cobramos cuando tú cobras"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre reembolsos, litigios y procesos legales.",
+    "stillQuestion": "¿No encontraste tu respuesta?",
+    "stillDesc": "Presenta tu caso y nuestros agentes te responderán en 24 horas.",
+    "ctaClaim": "Presentar mi caso",
+    "ctaResources": "Ver recursos"
+  },
+  "resources": {
+    "title": "Directorio de recursos de reembolso",
+    "subtitle": "20 plataformas fiables y legales seleccionadas para ayudarte a recuperar tu dinero.",
+    "search": "Buscar una plataforma o proceso…",
+    "all": "Todos",
+    "official": "Oficial",
+    "free": "Gratis",
+    "noResults": "Sin resultados para",
+    "clearSearch": "Borrar búsqueda",
+    "ctaTitle": "¿Necesitas apoyo personalizado?",
+    "ctaDesc": "Presenta tu caso en LitigeFlow y nuestros agentes te guiarán.",
+    "ctaClaim": "Presentar mi caso gratis",
+    "ctaFaq": "Leer la FAQ"
+  },
+  "footer": {
+    "tagline": "Plataforma de gestión de reembolsos y litigios. Proceso 100% legal, sin costes anticipados.",
+    "gdpr": "Conforme RGPD",
+    "nav": "Navegación",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "submitClaim": "Presentar reclamación",
+    "mySpace": "Mi cuenta",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "cookies": "Política de cookies",
+    "legal": "Aviso legal",
+    "warning": "⚠️ LitigeFlow solo gestiona procesos legales. Cualquier reclamación fraudulenta es un delito penal."
+  },
+  "legal": {
+    "title": "Aviso legal",
+    "privacy": { "title": "Política de privacidad" },
+    "terms": { "title": "Términos de servicio" },
+    "cookies": { "title": "Política de cookies" }
+  }
+}

@@ -1,4 +1,4 @@
-# LitigeFlow — Gestion des remboursements et litiges
+# LitigeFlow  Gestion des remboursements et litiges
 
 Application Next.js (App Router) de gestion des demandes de remboursement et des litiges : soumission multi-étapes avec pièces justificatives, suivi client et back-office d'administration.
 
@@ -12,10 +12,10 @@ Application Next.js (App Router) de gestion des demandes de remboursement et des
 
 ## Fonctionnalités
 
-- `/claim/new` — tunnel de soumission en 3 étapes : informations de la transaction, upload de preuves (PNG/JPEG/WEBP/PDF, 5 fichiers max, 5 Mo chacun), récapitulatif.
-- `/dashboard` — historique des litiges du client sous forme de cartes avec badges de statut (`PENDING`, `INVESTIGATING`, `RESOLVED`, `REJECTED`).
-- `/admin` — tableau de données (tri, recherche, filtre par statut) réservé aux rôles `AGENT`/`ADMIN` : changement de statut et assignation d'agents (assignation réservée aux `ADMIN`).
-- `/login`, `/register` — authentification (inscription en tant que `CLIENT`).
+- `/claim/new`  tunnel de soumission en 3 étapes : informations de la transaction, upload de preuves (PNG/JPEG/WEBP/PDF, 5 fichiers max, 5 Mo chacun), récapitulatif.
+- `/dashboard`  historique des litiges du client sous forme de cartes avec badges de statut (`PENDING`, `INVESTIGATING`, `RESOLVED`, `REJECTED`).
+- `/admin`  tableau de données (tri, recherche, filtre par statut) réservé aux rôles `AGENT`/`ADMIN` : changement de statut et assignation d'agents (assignation réservée aux `ADMIN`).
+- `/login`, `/register`  authentification (inscription en tant que `CLIENT`).
 - Les pièces justificatives sont stockées en base (bytea) et servies via `/api/evidence/[id]` avec contrôle d'accès (propriétaire ou staff).
 
 ## Démarrage local
@@ -53,10 +53,10 @@ Application Next.js (App Router) de gestion des demandes de remboursement et des
 ## Déploiement sur Vercel
 
 1. Créer une base PostgreSQL managée (Vercel Postgres/Neon, Supabase…).
-2. Importer le dépôt dans Vercel — le build exécute automatiquement `prisma generate && next build` (script `build`), et `postinstall` régénère le client Prisma.
+2. Importer le dépôt dans Vercel  le build exécute automatiquement `prisma generate && next build` (script `build`), et `postinstall` régénère le client Prisma.
 3. Définir les variables d'environnement du projet :
-   - `DATABASE_URL` — chaîne de connexion PostgreSQL (avec `?sslmode=require`)
-   - `AUTH_SECRET` — `openssl rand -base64 32`
+   - `DATABASE_URL`  chaîne de connexion PostgreSQL (avec `?sslmode=require`)
+   - `AUTH_SECRET`  `openssl rand -base64 32`
 4. Appliquer les migrations sur la base de production :
 
    ```bash

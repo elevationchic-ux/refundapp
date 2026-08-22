@@ -13,6 +13,12 @@ enum Role {
   ADMIN
 }
 
+enum Plan {
+  FREE
+  PRO
+  PREMIUM
+}
+
 enum ClaimStatus {
   PENDING
   INVESTIGATING
@@ -26,6 +32,8 @@ model User {
   password       String
   name           String
   role           Role     @default(CLIENT)
+  plan           Plan     @default(FREE)
+  stripeCustomerId String? @unique
   claims         Claim[]  @relation("ClaimOwner")
   assignedClaims Claim[]  @relation("ClaimAgent")
   createdAt      DateTime @default(now())

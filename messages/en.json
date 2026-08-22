@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Home",
+    "resources": "Resources",
+    "faq": "FAQ",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "dashboard": "My Account",
+    "startClaim": "File a Claim",
+    "login": "Sign In",
+    "logout": "Sign Out",
+    "register": "Create Account"
+  },
+  "hero": {
+    "badge": "🌍 Legal Refund & Dispute Platform",
+    "title": "Get your",
+    "titleHighlight": "refund",
+    "titleEnd": "— fast and legally",
+    "description": "Merchant dispute, flight delay, online scam, bank chargeback: LitigeFlow guides you to the right legal remedy and manages your case from start to finish.",
+    "cta": "File My Claim",
+    "ctaSecondary": "View Resources",
+    "trust": "100% legal process — no upfront fees"
+  },
+  "stats": {
+    "recovered": "Recovered for our clients",
+    "claims": "Cases handled",
+    "satisfaction": "Satisfaction rate"
+  },
+  "categories": {
+    "title": "What type of refund are you looking for?",
+    "subtitle": "Every situation has a legal remedy. Select your case to be directed to the right process.",
+    "cta": "File a Claim",
+    "merchant": { "label": "Merchant Dispute", "desc": "Item not received, not as described, unresponsive seller" },
+    "flight": { "label": "Flight Delay / Cancellation", "desc": "Up to €600 compensation (EU Regulation 261/2004)" },
+    "scam": { "label": "Online Scam", "desc": "Fraud, phishing, fake merchant website" },
+    "health": { "label": "Healthcare Refund", "desc": "Medical expenses, insurance reimbursement" },
+    "tax": { "label": "Tax Overpayment", "desc": "Tax credit, overpaid taxes refund" },
+    "crossborder": { "label": "Cross-border Dispute", "desc": "Purchase from another country" }
+  },
+  "features": {
+    "title": "Why LitigeFlow?",
+    "subtitle": "A platform built for consumers, with access to the best legal tools.",
+    "analysis": { "title": "Case Analysis", "desc": "Our system analyzes your situation and identifies the best available legal remedy." },
+    "portals": { "title": "Official Portals", "desc": "Direct access to AirHelp, Chargeback guides, Consumer protection agencies and more." },
+    "security": { "title": "Secure Data", "desc": "Your supporting documents are encrypted and accessible only by you and our agents." },
+    "tracking": { "title": "Real-time Tracking", "desc": "Client dashboard with your case status updated at every step." }
+  },
+  "process": {
+    "title": "How does it work?",
+    "subtitle": "3 simple steps to start your refund request.",
+    "step1": { "title": "Describe your situation", "desc": "Fill in the form in 3 steps: dispute type, amount, evidence." },
+    "step2": { "title": "We prepare your case", "desc": "Our agents verify the documents and submit the case to the right parties." },
+    "step3": { "title": "Tracking & resolution", "desc": "You track progress in real time and receive your refund." }
+  },
+  "tools": {
+    "title": "Free Tools",
+    "subtitle": "Estimate your refund chances and track your case in real time."
+  },
+  "testimonials": {
+    "title": "They got their refund"
+  },
+  "cta": {
+    "title": "Ready to recover your money?",
+    "subtitle": "File your case for free. Our agents review it within 24 hours.",
+    "button": "Get Started Free"
+  },
+  "orienteur": {
+    "title": "🧭 What is your remedy?",
+    "subtitle": "Free guide — instant result",
+    "question": "What is your situation?",
+    "detail": "Specify your situation:",
+    "results": "Your recommended remedies:",
+    "official": "Official",
+    "cta": "File my case on LitigeFlow"
+  },
+  "calculator": {
+    "title": "Refund Calculator",
+    "subtitle": "Estimate how much you could recover",
+    "amount": "Disputed amount",
+    "commission": "Commission rate",
+    "successRate": "Success probability",
+    "estimated": "Estimated recovered amount",
+    "ourFee": "Our commission",
+    "returned": "Amount returned to you",
+    "recoveryRate": "Recovery rate",
+    "disclaimer": "Estimate based on historical data. Actual amount may vary depending on case complexity. No commission is charged without successful recovery."
+  },
+  "tracker": {
+    "title": "Track My Case",
+    "subtitle": "Enter your details to check your case status",
+    "reference": "Case Reference Number",
+    "referencePlaceholder": "e.g. LF-2024-12345",
+    "email": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "submit": "Track My Case",
+    "searching": "Searching…",
+    "found": "Case Found",
+    "notFound": "Case Not Found",
+    "notFoundDesc": "Please check your case number and email",
+    "status": "Status",
+    "stage": "Stage",
+    "lastUpdate": "Last Updated",
+    "inProgress": "Under Review",
+    "bankLiaison": "Bank Liaison",
+    "hoursAgo": "2 hours ago",
+    "trackAnother": "Track Another Case",
+    "retry": "Try Again",
+    "noCase": "Don't have a case yet?",
+    "newClaim": "File a new claim"
+  },
+  "chat": {
+    "title": "LITIGEFLOW ASSISTANT",
+    "subtitle": "Refund & Dispute Help",
+    "welcome": "Hello! I'm your LitigeFlow assistant. How can I help you today? (merchant dispute, flight delay, scam…)",
+    "placeholder": "Your message…",
+    "autoReply": "Thank you for your message. Our agents will review your request and get back to you within 24 hours. For urgent matters, please call our support line."
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Choose the plan that fits your situation. No upfront fees on commission plans.",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "",
+      "desc": "For simple self-managed cases",
+      "features": ["Remedy guide", "Access to 20+ resource directory", "Full FAQ", "1 active case"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "20%",
+      "period": "of recovered amount",
+      "desc": "Full support from our agents",
+      "features": ["Everything in Free", "Expert case analysis", "Official letter drafting", "Bank & authority liaison", "Real-time tracking", "Unlimited cases"]
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$49",
+      "period": "/ month",
+      "desc": "For professionals and complex cases",
+      "features": ["Everything in Pro", "Dedicated agent", "24h priority processing", "Legal partner assistance", "Monthly report", "API access"]
+    },
+    "cta": "Get Started",
+    "ctaPro": "File My Claim",
+    "ctaPremium": "Subscribe",
+    "popular": "Most Popular",
+    "noUpfront": "No upfront fees — we get paid when you do"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about refunds, disputes and legal processes.",
+    "stillQuestion": "Didn't find your answer?",
+    "stillDesc": "File your case and our agents will respond within 24 hours.",
+    "ctaClaim": "File My Claim",
+    "ctaResources": "View Resources"
+  },
+  "resources": {
+    "title": "Refund Resources Directory",
+    "subtitle": "20 reliable and legal platforms selected to help you recover your money.",
+    "search": "Search for a platform or process…",
+    "all": "All",
+    "official": "Official",
+    "free": "Free",
+    "noResults": "No results for",
+    "clearSearch": "Clear search",
+    "ctaTitle": "Need personalized support?",
+    "ctaDesc": "File your case on LitigeFlow and our agents will guide you to the right remedy.",
+    "ctaClaim": "File My Case for Free",
+    "ctaFaq": "Read the FAQ"
+  },
+  "footer": {
+    "tagline": "Refund and dispute management platform. 100% legal process, no upfront fees.",
+    "gdpr": "GDPR & CCPA Compliant",
+    "nav": "Navigation",
+    "services": "Services",
+    "contact": "Contact",
+    "submitClaim": "File a Claim",
+    "mySpace": "My Account",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "legal": "Legal Notice",
+    "warning": "⚠️ LitigeFlow only handles legal processes. Any fraudulent refund claim is a criminal offense."
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "privacy": { "title": "Privacy Policy" },
+    "terms": { "title": "Terms of Service" },
+    "cookies": { "title": "Cookie Policy" }
+  }
+}

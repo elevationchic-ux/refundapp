@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "resources": "Ressources",
+    "faq": "FAQ",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "dashboard": "Mon espace",
+    "startClaim": "Déposer un dossier",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "Créer un compte"
+  },
+  "hero": {
+    "badge": "🇫🇷 Plateforme de remboursement légale",
+    "title": "Obtenez votre",
+    "titleHighlight": "remboursement",
+    "titleEnd": "— rapidement et légalement",
+    "description": "Litige marchand, retard de vol, arnaque en ligne, chargeback bancaire : LitigeFlow vous oriente vers le bon recours et gère votre dossier de A à Z.",
+    "cta": "Déposer mon dossier",
+    "ctaSecondary": "Voir les ressources",
+    "trust": "Démarche 100 % légale — aucune avance de frais"
+  },
+  "stats": {
+    "recovered": "Remboursés à nos clients",
+    "claims": "Dossiers traités",
+    "satisfaction": "Taux de satisfaction"
+  },
+  "categories": {
+    "title": "Quel type de remboursement cherchez-vous ?",
+    "subtitle": "Chaque situation a son recours légal. Sélectionnez votre cas pour être orienté vers la bonne démarche.",
+    "cta": "Déposer un dossier",
+    "merchant": { "label": "Litige marchand", "desc": "Produit non reçu, non conforme, vendeur récalcitrant" },
+    "flight": { "label": "Retard / annulation de vol", "desc": "Jusqu'à 600 € d'indemnisation (règlement CE 261/2004)" },
+    "scam": { "label": "Arnaque en ligne", "desc": "Escroquerie, phishing, faux site marchand" },
+    "health": { "label": "Remboursement santé", "desc": "Frais médicaux, Ameli, mutuelle" },
+    "tax": { "label": "Trop-perçu fiscal", "desc": "Crédit d'impôt, remboursement impôts.gouv.fr" },
+    "crossborder": { "label": "Litige transfrontalier", "desc": "Achat dans un autre pays de l'UE" }
+  },
+  "features": {
+    "title": "Pourquoi LitigeFlow ?",
+    "subtitle": "Une plateforme pensée pour les consommateurs, avec accès aux meilleurs outils légaux.",
+    "analysis": { "title": "Analyse de votre dossier", "desc": "Notre système analyse votre situation et identifie le meilleur recours légal disponible." },
+    "portals": { "title": "Portails officiels", "desc": "Accès direct à SignalConso, Litige.fr, AirHelp, Europe Consommateurs et bien d'autres." },
+    "security": { "title": "Données sécurisées", "desc": "Vos pièces justificatives sont chiffrées et accessibles uniquement par vous et nos agents." },
+    "tracking": { "title": "Suivi en temps réel", "desc": "Tableau de bord client avec statut de votre dossier mis à jour à chaque étape." }
+  },
+  "process": {
+    "title": "Comment ça marche ?",
+    "subtitle": "3 étapes simples pour lancer votre demande de remboursement.",
+    "step1": { "title": "Décrivez votre situation", "desc": "Remplissez le formulaire en 3 étapes : type de litige, montant, preuves." },
+    "step2": { "title": "Nous préparons votre dossier", "desc": "Nos agents vérifient les pièces et soumettent le dossier aux bons interlocuteurs." },
+    "step3": { "title": "Suivi & résolution", "desc": "Vous suivez l'avancement en temps réel et recevez votre remboursement." }
+  },
+  "tools": {
+    "title": "Outils gratuits",
+    "subtitle": "Estimez vos chances de remboursement et suivez votre dossier en temps réel."
+  },
+  "testimonials": {
+    "title": "Ils ont obtenu leur remboursement"
+  },
+  "cta": {
+    "title": "Prêt à récupérer votre argent ?",
+    "subtitle": "Déposez votre dossier gratuitement. Nos agents l'examinent sous 24 h.",
+    "button": "Commencer gratuitement"
+  },
+  "orienteur": {
+    "title": "🧭 Quel est votre recours ?",
+    "subtitle": "Orienteur gratuit — résultat immédiat",
+    "question": "Quelle est votre situation ?",
+    "detail": "Précisez votre situation :",
+    "results": "Vos recours recommandés :",
+    "official": "Officiel",
+    "cta": "Déposer mon dossier sur LitigeFlow"
+  },
+  "calculator": {
+    "title": "Calculateur de remboursement",
+    "subtitle": "Estimez le montant que vous pourriez récupérer",
+    "amount": "Montant litigieux",
+    "commission": "Taux de commission",
+    "successRate": "Probabilité de succès",
+    "estimated": "Montant récupéré estimé",
+    "ourFee": "Notre commission",
+    "returned": "Montant reversé",
+    "recoveryRate": "Taux de récupération",
+    "disclaimer": "Estimation basée sur les données historiques. Le montant réel peut varier selon la complexité du dossier. Aucune commission n'est prélevée sans récupération effective."
+  },
+  "tracker": {
+    "title": "Suivre mon dossier",
+    "subtitle": "Entrez vos informations pour consulter l'état de votre dossier",
+    "reference": "Numéro de dossier",
+    "referencePlaceholder": "ex : LF-2024-12345",
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "votre@email.fr",
+    "submit": "Suivre mon dossier",
+    "searching": "Recherche en cours…",
+    "found": "Dossier trouvé",
+    "notFound": "Dossier introuvable",
+    "notFoundDesc": "Vérifiez votre numéro de dossier et votre e-mail",
+    "status": "Statut",
+    "stage": "Étape",
+    "lastUpdate": "Dernière mise à jour",
+    "inProgress": "En cours d'instruction",
+    "bankLiaison": "Liaison bancaire",
+    "hoursAgo": "Il y a 2 heures",
+    "trackAnother": "Suivre un autre dossier",
+    "retry": "Réessayer",
+    "noCase": "Pas encore de dossier ?",
+    "newClaim": "Déposer un nouveau dossier"
+  },
+  "chat": {
+    "title": "ASSISTANT LITIGEFLOW",
+    "subtitle": "Aide & Remboursements",
+    "welcome": "Bonjour ! Je suis votre assistant LitigeFlow. Comment puis-je vous aider aujourd'hui ? (litige marchand, retard de vol, arnaque…)",
+    "placeholder": "Votre message…",
+    "autoReply": "Merci pour votre message. Nos agents examineront votre demande et vous répondront sous 24 h. Pour une urgence, appelez notre ligne de support."
+  },
+  "pricing": {
+    "title": "Tarifs transparents",
+    "subtitle": "Choisissez la formule adaptée à votre situation. Aucune avance de frais sur les formules à commission.",
+    "free": {
+      "name": "Gratuit",
+      "price": "0 €",
+      "period": "",
+      "desc": "Pour les démarches simples en autonomie",
+      "features": ["Orienteur de recours", "Accès à l'annuaire des 20 ressources", "FAQ complète", "1 dossier actif"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "20 %",
+      "period": "du montant récupéré",
+      "desc": "Accompagnement complet par nos agents",
+      "features": ["Tout le plan Gratuit", "Analyse experte de votre dossier", "Rédaction des courriers officiels", "Liaison avec banques & autorités", "Suivi temps réel", "Dossiers illimités"]
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "49 €",
+      "period": "/ mois",
+      "desc": "Pour les professionnels et cas complexes",
+      "features": ["Tout le plan Pro", "Agent dédié", "Priorité de traitement 24 h", "Assistance juridique partenaire", "Rapport mensuel", "API access"]
+    },
+    "cta": "Commencer",
+    "ctaPro": "Déposer mon dossier",
+    "ctaPremium": "S'abonner",
+    "popular": "Le plus populaire",
+    "noUpfront": "Aucune avance — on est payé si vous l'êtes"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur les remboursements, litiges et démarches légales.",
+    "stillQuestion": "Vous n'avez pas trouvé votre réponse ?",
+    "stillDesc": "Déposez votre dossier et nos agents vous répondent sous 24 h.",
+    "ctaClaim": "Déposer mon dossier",
+    "ctaResources": "Voir les ressources"
+  },
+  "resources": {
+    "title": "Annuaire des ressources de remboursement",
+    "subtitle": "20 sites fiables et légaux sélectionnés pour vous aider à récupérer votre argent.",
+    "search": "Rechercher un site ou une démarche…",
+    "all": "Tous",
+    "official": "Officiel",
+    "free": "Gratuit",
+    "noResults": "Aucun résultat pour",
+    "clearSearch": "Effacer la recherche",
+    "ctaTitle": "Besoin d'un accompagnement personnalisé ?",
+    "ctaDesc": "Déposez votre dossier sur LitigeFlow et nos agents vous guident vers le bon recours.",
+    "ctaClaim": "Déposer mon dossier gratuitement",
+    "ctaFaq": "Lire la FAQ"
+  },
+  "footer": {
+    "tagline": "Plateforme de gestion des remboursements et litiges. Démarche 100 % légale, aucune avance de frais.",
+    "gdpr": "Conforme RGPD",
+    "nav": "Navigation",
+    "services": "Services",
+    "contact": "Contact",
+    "submitClaim": "Déposer un dossier",
+    "mySpace": "Mon espace client",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "CGU",
+    "cookies": "Cookies",
+    "legal": "Mentions légales",
+    "warning": "⚠️ LitigeFlow ne pratique que des démarches légales. Toute fraude à l'encontre d'un commerçant est une escroquerie pénalement sanctionnée."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "privacy": { "title": "Politique de confidentialité" },
+    "terms": { "title": "Conditions Générales d'Utilisation" },
+    "cookies": { "title": "Politique de cookies" }
+  }
+}

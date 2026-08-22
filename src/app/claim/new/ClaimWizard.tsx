@@ -212,7 +212,7 @@ export function ClaimWizard() {
             <div className="flex justify-between py-2">
               <dt className="text-slate-500">Montant contesté</dt>
               <dd className="font-medium text-slate-900">
-                {transaction.amount ? formatAmount(Number(transaction.amount)) : "—"}
+                {transaction.amount ? formatAmount(Number(transaction.amount)) : ""}
               </dd>
             </div>
             <div className="flex justify-between py-2">
@@ -220,19 +220,19 @@ export function ClaimWizard() {
               <dd className="font-medium text-slate-900">
                 {transaction.date
                   ? new Date(transaction.date).toLocaleDateString("fr-FR")
-                  : "—"}
+                  : ""}
               </dd>
             </div>
             <div className="flex justify-between py-2">
               <dt className="text-slate-500">Référence</dt>
               <dd className="font-medium text-slate-900">
-                {transaction.reference || "—"}
+                {transaction.reference || ""}
               </dd>
             </div>
             <div className="py-2">
               <dt className="text-slate-500">Description</dt>
               <dd className="mt-1 whitespace-pre-wrap text-slate-900">
-                {transaction.description || "—"}
+                {transaction.description || ""}
               </dd>
             </div>
             <div className="py-2">
