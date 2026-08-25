@@ -90,6 +90,9 @@ export function GET(req: NextRequest) {
     headers: {
       'Content-Type': 'application/manifest+json',
       'Cache-Control': 'public, max-age=3600',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET',
+      'Access-Control-Allow-Headers': 'Content-Type',
     },
   });
 }

@@ -1,42 +1,48 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { nanoid } from 'nanoid';
+import { randomBytes } from 'crypto';
 
 export const dynamic = 'force-dynamic';
+
+// Generate a random session ID
+function generateSessionId(): string {
+  return randomBytes(16).toString('hex');
+}
 
 /**
  * GET /api/visitor
  * Récupère ou crée une session visiteur
  */
 export async function GET(req: NextRequest) {
-  const sessionId = req.headers.get('x-session-id') || req.nextUrl.searchParams.get('sessionId');
-  
-  if (sessionId) {
-    const visitor = await prisma.visitor.findUnique({
-      where: { sessionId },
-      include: {
-        messages: {
-          orderBy: { createdAt: 'desc' },
-          take: 1,
-        },
-      },
-    });
+  try {
+    const sessionId = req.headers.get('x-session-id') || req.nextUrl.searchParams.get('sessionId');
     
-    if (visitor) {
-      // Update lastSeen
-      await prisma.visitor.update({
-        where: { id: visitor.id },
-        data: { lastSeen: new Date() },
+    if (sessionId) {
+      const visitor = await prisma.visitor.findUnique({
+        where: { sessionId },
+        include: {
+          messages: {
+            orderBy: { createdAt: 'desc' },
+            take: 1,
+          },
+        },
       });
-      return NextResponse.json(visitor);
+      
+      if (visitor) {
+        // Update lastSeen
+        await prisma.visitor.update({
+          where: { id: visitor.id },
+          data: { lastSeen: new Date() },
+        });
+        return NextResponse.json(visitor);
+      }
     }
-  }
-  
-  // Create new visitor
-  const newSessionId = nanoid(32);
-  const locale = req.headers.get('accept-language')?.split(',')[0]?.split('-')[0] || 'fr';
-  const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || null;
-  const userAgent = req.headers.get('user-agent') || null;
+    
+    // Create new visitor
+    const newSessionId = generateSessionId();
+    const locale = req.headers.get('accept-language')?.split(',')[0]?.split('-')[0] || 'fr';
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || null;
+    const userAgent = req.headers.get('user-agent') || null;
   
   const visitor = await prisma.visitor.create({
     data: {
