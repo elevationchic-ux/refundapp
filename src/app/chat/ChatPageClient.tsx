@@ -33,15 +33,28 @@ export default function ChatPageClient() {
       
       try {
         const res = await fetch(`/api/visitor${storedSessionId ? `?sessionId=${storedSessionId}` : ''}`);
+        if (!res.ok) {
+          console.warn('Failed to fetch visitor session, using fallback');
+          const fallbackId = storedSessionId || `fallback-${Date.now()}`;
+          setSessionId(fallbackId);
+          localStorage.setItem('visitor_session_id', fallbackId);
+          setIsLoading(false);
+          return;
+        }
         const data = await res.json();
-        setSessionId(data.sessionId);
-        localStorage.setItem('visitor_session_id', data.sessionId);
-        
-        if (data.name || data.email) {
-          setVisitorInfo({ name: data.name || '', email: data.email || '' });
+        if (data.sessionId) {
+          setSessionId(data.sessionId);
+          localStorage.setItem('visitor_session_id', data.sessionId);
+          
+          if (data.name || data.email) {
+            setVisitorInfo({ name: data.name || '', email: data.email || '' });
+          }
         }
       } catch (error) {
         console.error('Failed to initialize visitor session:', error);
+        const fallbackId = storedSessionId || `fallback-${Date.now()}`;
+        setSessionId(fallbackId);
+        localStorage.setItem('visitor_session_id', fallbackId);
       } finally {
         setIsLoading(false);
       }

@@ -32,11 +32,25 @@ export default function ChatWidget() {
       
       try {
         const res = await fetch(`/api/visitor${storedSessionId ? `?sessionId=${storedSessionId}` : ''}`);
+        if (!res.ok) {
+          console.warn('Failed to fetch visitor session, using fallback');
+          // Use a fallback session ID
+          const fallbackId = storedSessionId || `fallback-${Date.now()}`;
+          setSessionId(fallbackId);
+          localStorage.setItem('visitor_session_id', fallbackId);
+          return;
+        }
         const data = await res.json();
-        setSessionId(data.sessionId);
-        localStorage.setItem('visitor_session_id', data.sessionId);
+        if (data.sessionId) {
+          setSessionId(data.sessionId);
+          localStorage.setItem('visitor_session_id', data.sessionId);
+        }
       } catch (error) {
         console.error('Failed to initialize visitor session:', error);
+        // Use a fallback session ID
+        const fallbackId = storedSessionId || `fallback-${Date.now()}`;
+        setSessionId(fallbackId);
+        localStorage.setItem('visitor_session_id', fallbackId);
       }
     };
     

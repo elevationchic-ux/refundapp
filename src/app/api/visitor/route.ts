@@ -18,23 +18,28 @@ export async function GET(req: NextRequest) {
     const sessionId = req.headers.get('x-session-id') || req.nextUrl.searchParams.get('sessionId');
     
     if (sessionId) {
-      const visitor = await prisma.visitor.findUnique({
-        where: { sessionId },
-        include: {
-          messages: {
-            orderBy: { createdAt: 'desc' },
-            take: 1,
+      try {
+        const visitor = await prisma.visitor.findUnique({
+          where: { sessionId },
+          include: {
+            messages: {
+              orderBy: { createdAt: 'desc' },
+              take: 1,
+            },
           },
-        },
-      });
-      
-      if (visitor) {
-        // Update lastSeen
-        await prisma.visitor.update({
-          where: { id: visitor.id },
-          data: { lastSeen: new Date() },
         });
-        return NextResponse.json(visitor);
+        
+        if (visitor) {
+          // Update lastSeen
+          await prisma.visitor.update({
+            where: { id: visitor.id },
+            data: { lastSeen: new Date() },
+          });
+          return NextResponse.json(visitor);
+        }
+      } catch (dbError) {
+        console.error('Database error finding visitor:', dbError);
+        // Continue to create new visitor if not found
       }
     }
     
@@ -56,7 +61,14 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(visitor);
   } catch (error) {
     console.error('Failed to get/create visitor:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    // Return a minimal response to avoid breaking the frontend
+    return NextResponse.json({ 
+      sessionId: generateSessionId(),
+      id: 'temp',
+      locale: 'fr',
+      createdAt: new Date().toISOString(),
+      lastSeen: new Date().toISOString(),
+    }, { status: 200 });
   }
 }
 
