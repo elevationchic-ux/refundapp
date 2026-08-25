@@ -91,7 +91,7 @@ export default async function DashboardPage({
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Mes dossiers</h2>
               <Link
-                href={`/${locale}/claim/new`}
+                href="/claim/new"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
               >
                 Nouveau dossier
@@ -104,7 +104,7 @@ export default async function DashboardPage({
               <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-600 mb-4">Aucun dossier pour le moment</p>
               <Link
-                href={`/${locale}/claim/new`}
+                href="/claim/new"
                 className="text-indigo-600 hover:text-indigo-700 font-medium"
               >
                 Déposer mon premier dossier →

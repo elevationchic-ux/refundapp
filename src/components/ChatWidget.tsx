@@ -16,6 +16,7 @@ interface Message {
 
 export default function ChatWidget() {
   const t = useTranslations('chat');
+  const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [message, setMessage] = useState('');
@@ -25,8 +26,15 @@ export default function ChatWidget() {
   const [isSending, setIsSending] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Mount check for hydration
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Initialize visitor session
   useEffect(() => {
+    if (!isMounted) return;
+    
     const initSession = async () => {
       const storedSessionId = localStorage.getItem('visitor_session_id');
       
@@ -55,7 +63,7 @@ export default function ChatWidget() {
     };
     
     initSession();
-  }, []);
+  }, [isMounted]);
 
   // Fetch messages when session is ready
   const fetchMessages = useCallback(async () => {
@@ -138,6 +146,11 @@ export default function ChatWidget() {
       setIsSending(false);
     }
   };
+
+  // Prevent hydration mismatch
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>
