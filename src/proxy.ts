@@ -82,7 +82,7 @@ function detectLocaleFromHeaders(request: NextRequest): string | null {
 
 const intlMiddleware = createMiddleware(routing);
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Skip middleware for API routes, static files, etc.
