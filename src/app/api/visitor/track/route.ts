@@ -43,20 +43,24 @@ export async function POST(req: NextRequest) {
       const newSessionId = sessionId || generateSessionId();
       const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || null;
       const userAgent = req.headers.get('user-agent') || null;
+      
+      visitor = await prisma.visitor.create({
+        data: {
+          sessionId: newSessionId,
+          locale: locale || 'fr',
+          page,
+          ip,
+          userAgent,
+        },
+      });
+    }
     
-    visitor = await prisma.visitor.create({
-      data: {
-        sessionId: newSessionId,
-        locale: locale || 'fr',
-        page,
-        ip,
-        userAgent,
-      },
+    return NextResponse.json({
+      sessionId: visitor.sessionId,
+      visitorId: visitor.id,
     });
+  } catch (error) {
+    console.error('Failed to track visitor:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
-  
-  return NextResponse.json({
-    sessionId: visitor.sessionId,
-    visitorId: visitor.id,
-  });
 }

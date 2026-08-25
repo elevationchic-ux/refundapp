@@ -43,17 +43,21 @@ export async function GET(req: NextRequest) {
     const locale = req.headers.get('accept-language')?.split(',')[0]?.split('-')[0] || 'fr';
     const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || null;
     const userAgent = req.headers.get('user-agent') || null;
-  
-  const visitor = await prisma.visitor.create({
-    data: {
-      sessionId: newSessionId,
-      locale,
-      ip,
-      userAgent,
-    },
-  });
-  
-  return NextResponse.json(visitor);
+    
+    const visitor = await prisma.visitor.create({
+      data: {
+        sessionId: newSessionId,
+        locale,
+        ip,
+        userAgent,
+      },
+    });
+    
+    return NextResponse.json(visitor);
+  } catch (error) {
+    console.error('Failed to get/create visitor:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
 }
 
 /**
@@ -61,22 +65,27 @@ export async function GET(req: NextRequest) {
  * Met à jour les infos du visiteur (page courante, nom, email)
  */
 export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { sessionId, page, name, email } = body;
-  
-  if (!sessionId) {
-    return NextResponse.json({ error: 'sessionId requis' }, { status: 400 });
+  try {
+    const body = await req.json();
+    const { sessionId, page, name, email } = body;
+    
+    if (!sessionId) {
+      return NextResponse.json({ error: 'sessionId requis' }, { status: 400 });
+    }
+    
+    const visitor = await prisma.visitor.update({
+      where: { sessionId },
+      data: {
+        ...(page && { page }),
+        ...(name && { name }),
+        ...(email && { email }),
+        lastSeen: new Date(),
+      },
+    });
+    
+    return NextResponse.json(visitor);
+  } catch (error) {
+    console.error('Failed to update visitor:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
-  
-  const visitor = await prisma.visitor.update({
-    where: { sessionId },
-    data: {
-      ...(page && { page }),
-      ...(name && { name }),
-      ...(email && { email }),
-      lastSeen: new Date(),
-    },
-  });
-  
-  return NextResponse.json(visitor);
 }

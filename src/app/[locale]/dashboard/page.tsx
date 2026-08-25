@@ -1,4 +1,4 @@
-import { requireAuth } from '@/lib/session';
+import { requireSession } from '@/lib/session';
 import { prisma } from '@/lib/prisma';
 import { Header } from '@/components/Header';
 import { ClaimStatusBadge } from '@/components/ClaimStatusBadge';
@@ -13,7 +13,7 @@ export default async function DashboardPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const session = await requireAuth();
+  const session = await requireSession();
 
   // Fetch user's claims
   const claims = await prisma.claim.findMany({
