@@ -11,6 +11,14 @@ export default function PricingClient() {
   const locale = useLocale();
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
 
+  // Get price in local currency
+  const getPremiumPrice = () => {
+    if (locale.startsWith('en-US')) return '$49';
+    if (locale.startsWith('en-CA') || locale.startsWith('fr-CA')) return 'CA$59';
+    if (locale.startsWith('en-GB')) return '£39';
+    return '49 €'; // EUR (default)
+  };
+
   async function handleStripeCheckout(plan: 'premium') {
     setLoadingPlan(plan);
     try {
@@ -32,7 +40,7 @@ export default function PricingClient() {
     {
       key: 'free',
       name: t('free.name'),
-      price: t('free.price'),
+      price: locale.startsWith('en-US') ? '$0' : locale.startsWith('en-CA') ? 'CA$0' : locale.startsWith('en-GB') ? '£0' : t('free.price'),
       period: t('free.period'),
       desc: t('free.desc'),
       features: [t('free.features.0'), t('free.features.1'), t('free.features.2'), t('free.features.3')],
@@ -58,7 +66,7 @@ export default function PricingClient() {
     {
       key: 'premium',
       name: t('premium.name'),
-      price: t('premium.price'),
+      price: getPremiumPrice(),
       period: t('premium.period'),
       desc: t('premium.desc'),
       features: [t('premium.features.0'), t('premium.features.1'), t('premium.features.2'), t('premium.features.3'), t('premium.features.4'), t('premium.features.5')],
@@ -157,7 +165,7 @@ export default function PricingClient() {
           </div>
           <div className="flex justify-center items-center gap-2 mt-6 text-sm text-gray-500">
             <Lock className="w-4 h-4 text-green-500" />
-            <span>Paiements traités par Stripe — chiffrement SSL 256 bits</span>
+            <span>Paiements traités par Stripe  chiffrement SSL 256 bits</span>
           </div>
         </motion.div>
 

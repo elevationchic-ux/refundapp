@@ -26,17 +26,28 @@ enum ClaimStatus {
   REJECTED
 }
 
+enum NotificationType {
+  NEW_CLAIM
+  STATUS_CHANGE
+  NEW_MESSAGE
+  NEW_VISITOR
+  PAYMENT
+}
+
 model User {
-  id             String   @id @default(cuid())
-  email          String   @unique
-  password       String
-  name           String
-  role           Role     @default(CLIENT)
-  plan           Plan     @default(FREE)
-  stripeCustomerId String? @unique
-  claims         Claim[]  @relation("ClaimOwner")
-  assignedClaims Claim[]  @relation("ClaimAgent")
-  createdAt      DateTime @default(now())
+  id               String         @id @default(cuid())
+  email            String         @unique
+  password         String
+  name             String
+  role             Role           @default(CLIENT)
+  plan             Plan           @default(FREE)
+  stripeCustomerId String?        @unique
+  claims           Claim[]        @relation("ClaimOwner")
+  assignedClaims   Claim[]        @relation("ClaimAgent")
+  sentMessages     ChatMessage[]  @relation("MessageSender")
+  notifications    Notification[]
+  adminNotes       AdminNote[]    @relation("NoteAuthor")
+  createdAt        DateTime       @default(now())
 }
 
 model Claim {
@@ -52,6 +63,8 @@ model Claim {
   description String
   date        DateTime
   evidence    Evidence[]
+  messages    ChatMessage[]
+  notes       AdminNote[]
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 
@@ -67,6 +80,65 @@ model Evidence {
   mimeType  String
   size      Int
   data      Bytes
+  createdAt DateTime @default(now())
+
+  @@index([claimId])
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  claimId   String?
+  claim     Claim?   @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  visitorId String?
+  visitor   Visitor? @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+  senderId  String?
+  sender    User?    @relation("MessageSender", fields: [senderId], references: [id], onDelete: SetNull)
+  content   String
+  isFromAdmin Boolean @default(false)
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  @@index([claimId])
+  @@index([visitorId])
+}
+
+model Visitor {
+  id        String        @id @default(cuid())
+  sessionId String        @unique
+  name      String?
+  email     String?
+  locale    String        @default("fr")
+  page      String?
+  userAgent String?
+  ip        String?
+  messages  ChatMessage[]
+  createdAt DateTime      @default(now())
+  lastSeen  DateTime      @default(now())
+
+  @@index([sessionId])
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      NotificationType
+  title     String
+  body      String
+  link      String?
+  read      Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  @@index([userId, read])
+}
+
+model AdminNote {
+  id        String   @id @default(cuid())
+  claimId   String
+  claim     Claim    @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User     @relation("NoteAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+  content   String
   createdAt DateTime @default(now())
 
   @@index([claimId])

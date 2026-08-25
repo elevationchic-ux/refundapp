@@ -26,32 +26,68 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'hero' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const ogLocale = OG_LOCALE[locale as Locale] ?? 'fr_FR';
+
+  const title = 'LitigeFlow – Remboursements & Litiges';
+  const description = t('description');
 
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: 'LitigeFlow – Refund & Dispute Platform',
+      default: title,
       template: '%s | LitigeFlow',
     },
-    description: t('description'),
+    description,
+    keywords: [
+      'remboursement', 'litige', 'arnaque', 'retard vol', 'chargeback',
+      'refund', 'dispute', 'consumer protection', 'Erstattung', 'reembolso',
+    ],
+    authors: [{ name: 'LitigeFlow', url: siteUrl }],
+    creator: 'LitigeFlow',
+    publisher: 'LitigeFlow',
     openGraph: {
       type: 'website',
       locale: ogLocale,
       url: `${siteUrl}/${locale}`,
       siteName: 'LitigeFlow',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'LitigeFlow' }],
+      title,
+      description,
+      images: [
+        {
+          url: '/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'LitigeFlow Logo',
+        },
+      ],
     },
-    twitter: { card: 'summary_large_image', images: ['/og-image.png'] },
-    robots: { index: true, follow: true },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+      images: ['/icons/icon-512x512.png'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+    },
     alternates: {
       canonical: `${siteUrl}/${locale}`,
       languages: {
-        'fr': `${siteUrl}/fr`,
-        'en': `${siteUrl}/en`,
-        'es': `${siteUrl}/es`,
-        'de': `${siteUrl}/de`,
+        fr: `${siteUrl}/fr`,
+        en: `${siteUrl}/en`,
+        es: `${siteUrl}/es`,
+        de: `${siteUrl}/de`,
+        'x-default': `${siteUrl}/fr`,
       },
+    },
+    manifest: '/api/manifest',
+    icons: {
+      icon: '/favicon.svg',
+      apple: '/apple-touch-icon.png',
+      shortcut: '/favicon.svg',
     },
   };
 }
@@ -74,6 +110,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="manifest" href="/api/manifest" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#4f46e5" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="LitigeFlow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <Navigation />

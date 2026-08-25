@@ -15,11 +15,11 @@
     "badge": "🇫🇷 Plateforme de remboursement légale",
     "title": "Obtenez votre",
     "titleHighlight": "remboursement",
-    "titleEnd": "— rapidement et légalement",
+    "titleEnd": " rapidement et légalement",
     "description": "Litige marchand, retard de vol, arnaque en ligne, chargeback bancaire : LitigeFlow vous oriente vers le bon recours et gère votre dossier de A à Z.",
     "cta": "Déposer mon dossier",
     "ctaSecondary": "Voir les ressources",
-    "trust": "Démarche 100 % légale — aucune avance de frais"
+    "trust": "Démarche 100 % légale  aucune avance de frais"
   },
   "stats": {
     "recovered": "Remboursés à nos clients",
@@ -66,12 +66,20 @@
   },
   "orienteur": {
     "title": "🧭 Quel est votre recours ?",
-    "subtitle": "Orienteur gratuit — résultat immédiat",
+    "subtitle": "Orienteur gratuit  résultat immédiat",
     "question": "Quelle est votre situation ?",
     "detail": "Précisez votre situation :",
     "results": "Vos recours recommandés :",
     "official": "Officiel",
-    "cta": "Déposer mon dossier sur LitigeFlow"
+    "cta": "Déposer mon dossier sur LitigeFlow",
+    "situations": {
+      "merchant": "🛍️ Litige avec un marchand",
+      "transport": "✈️ Retard / annulation de transport",
+      "scam": "🚨 Arnaque / escroquerie en ligne",
+      "cashback": "💰 Cashback & remboursement partiel",
+      "health": "🏥 Remboursement santé",
+      "tax": "📋 Remboursement fiscal"
+    }
   },
   "calculator": {
     "title": "Calculateur de remboursement",
@@ -143,7 +151,7 @@
     "ctaPro": "Déposer mon dossier",
     "ctaPremium": "S'abonner",
     "popular": "Le plus populaire",
-    "noUpfront": "Aucune avance — on est payé si vous l'êtes"
+    "noUpfront": "Aucune avance  on est payé si vous l'êtes"
   },
   "faq": {
     "title": "Questions fréquentes",
@@ -186,6 +194,52 @@
     "title": "Mentions légales",
     "privacy": { "title": "Politique de confidentialité" },
     "terms": { "title": "Conditions Générales d'Utilisation" },
-    "cookies": { "title": "Politique de cookies" }
+    "cookies": { "title": "Politique de cookies" },
+    "regional": {
+      "EU": {
+        "flightReg": "Règlement CE 261/2004",
+        "authorities": ["SignalConso", "Europe Consommateurs", "ECC-Net"],
+        "description": "Protection des consommateurs européens"
+      },
+      "US": {
+        "flightReg": "DOT (Department of Transportation)",
+        "authorities": ["FTC", "CFPB", "Better Business Bureau"],
+        "description": "Federal consumer protection"
+      },
+      "CA": {
+        "flightReg": "RPPA (Règlement sur la protection des passagers aériens)",
+        "authorities": ["OTC", "Bureau de la concurrence", "Centre antifraude du Canada"],
+        "description": "Protection des consommateurs canadiens"
+      },
+      "UK": {
+        "flightReg": "UK261 (droit européen conservé)",
+        "authorities": ["CAA", "Which?", "Citizens Advice"],
+        "description": "UK consumer protection"
+      }
+    }
+  },
+  "admin": {
+    "dashboard": "Tableau de bord",
+    "claims": "Réclamations",
+    "users": "Utilisateurs",
+    "chat": "Messages",
+    "analytics": "Analytiques",
+    "notifications": "Notifications",
+    "settings": "Paramètres",
+    "totalClaims": "Total réclamations",
+    "totalAmount": "Montant total",
+    "successRate": "Taux de résolution",
+    "newUsers": "Nouveaux utilisateurs",
+    "recentClaims": "Réclamations récentes",
+    "activeChats": "Discussions actives",
+    "performance": "Performance mensuelle",
+    "viewAll": "Voir tout",
+    "noNotifications": "Aucune notification non lue",
+    "noChats": "Aucune discussion active",
+    "reply": "Répondre",
+    "viewCase": "Voir le dossier",
+    "markAllRead": "Marquer tout comme lu",
+    "pageTitle": "Tableau de bord administrateur",
+    "pageDesc": "Vue d'ensemble des activités, statistiques et performances de la plateforme"
   }
 }

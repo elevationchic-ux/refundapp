@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Circle Background -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+  
+  <!-- Shield Shape -->
+  <path d="M256 100 L380 140 L380 260 C380 340 320 400 256 420 C192 400 132 340 132 260 L132 140 Z" fill="url(#shieldGradient)" opacity="0.95"/>
+  
+  <!-- Checkmark inside Shield -->
+  <path d="M200 260 L240 300 L320 200" stroke="#6366f1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="160" cy="180" r="8" fill="#ffffff" opacity="0.6"/>
+  <circle cx="352" cy="180" r="8" fill="#ffffff" opacity="0.6"/>
+  <circle cx="160" cy="340" r="8" fill="#ffffff" opacity="0.6"/>
+  <circle cx="352" cy="340" r="8" fill="#ffffff" opacity="0.6"/>
+</svg>

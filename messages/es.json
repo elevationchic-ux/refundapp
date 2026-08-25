@@ -15,11 +15,11 @@
     "badge": "🌍 Plataforma legal de reembolsos y litigios",
     "title": "Obtén tu",
     "titleHighlight": "reembolso",
-    "titleEnd": "— rápido y legalmente",
+    "titleEnd": " rápido y legalmente",
     "description": "Litigio con comerciante, retraso de vuelo, estafa online, contracargo bancario: LitigeFlow te orienta hacia el recurso legal adecuado y gestiona tu caso de principio a fin.",
     "cta": "Presentar mi reclamación",
     "ctaSecondary": "Ver recursos",
-    "trust": "Proceso 100% legal — sin costes anticipados"
+    "trust": "Proceso 100% legal  sin costes anticipados"
   },
   "stats": {
     "recovered": "Recuperado para nuestros clientes",
@@ -61,12 +61,20 @@
   },
   "orienteur": {
     "title": "🧭 ¿Cuál es tu recurso?",
-    "subtitle": "Guía gratuita — resultado inmediato",
+    "subtitle": "Guía gratuita  resultado inmediato",
     "question": "¿Cuál es tu situación?",
     "detail": "Especifica tu situación:",
     "results": "Tus recursos recomendados:",
     "official": "Oficial",
-    "cta": "Presentar mi caso en LitigeFlow"
+    "cta": "Presentar mi caso en LitigeFlow",
+    "situations": {
+      "merchant": "🛍️ Litigio con un comerciante",
+      "transport": "✈️ Retraso / cancelación de transporte",
+      "scam": "🚨 Estafa / fraude online",
+      "cashback": "💰 Cashback y reembolso parcial",
+      "health": "🏥 Reembolso sanitario",
+      "tax": "📋 Devolución fiscal"
+    }
   },
   "calculator": {
     "title": "Calculadora de reembolso",
@@ -120,7 +128,7 @@
     "ctaPro": "Presentar mi caso",
     "ctaPremium": "Suscribirse",
     "popular": "Más popular",
-    "noUpfront": "Sin costes anticipados — cobramos cuando tú cobras"
+    "noUpfront": "Sin costes anticipados  cobramos cuando tú cobras"
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -163,6 +171,52 @@
     "title": "Aviso legal",
     "privacy": { "title": "Política de privacidad" },
     "terms": { "title": "Términos de servicio" },
-    "cookies": { "title": "Política de cookies" }
+    "cookies": { "title": "Política de cookies" },
+    "regional": {
+      "EU": {
+        "flightReg": "Reglamento CE 261/2004",
+        "authorities": ["Consumo", "Centros Europeos del Consumidor", "ECC-Net"],
+        "description": "Protección del consumidor europeo"
+      },
+      "US": {
+        "flightReg": "DOT (Departamento de Transporte)",
+        "authorities": ["FTC", "CFPB", "Better Business Bureau"],
+        "description": "Protección federal del consumidor"
+      },
+      "CA": {
+        "flightReg": "RPPA (Reglamento de Protección de Pasajeros Aéreos)",
+        "authorities": ["OTC", "Oficina de Competencia", "Centro Antifraude Canadiense"],
+        "description": "Protección del consumidor canadiense"
+      },
+      "UK": {
+        "flightReg": "UK261 (ley de la UE conservada)",
+        "authorities": ["CAA", "Which?", "Citizens Advice"],
+        "description": "Protección del consumidor del Reino Unido"
+      }
+    }
+  },
+  "admin": {
+    "dashboard": "Panel de control",
+    "claims": "Reclamaciones",
+    "users": "Usuarios",
+    "chat": "Mensajes",
+    "analytics": "Analíticas",
+    "notifications": "Notificaciones",
+    "settings": "Configuración",
+    "totalClaims": "Total reclamaciones",
+    "totalAmount": "Importe total",
+    "successRate": "Tasa de resolución",
+    "newUsers": "Nuevos usuarios",
+    "recentClaims": "Reclamaciones recientes",
+    "activeChats": "Chats activos",
+    "performance": "Rendimiento mensual",
+    "viewAll": "Ver todo",
+    "noNotifications": "Sin notificaciones no leídas",
+    "noChats": "Sin chats activos",
+    "reply": "Responder",
+    "viewCase": "Ver caso",
+    "markAllRead": "Marcar todo como leído",
+    "pageTitle": "Panel de administración",
+    "pageDesc": "Resumen de actividades, estadísticas y rendimiento de la plataforma"
   }
 }

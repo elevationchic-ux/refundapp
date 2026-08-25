@@ -12,7 +12,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   fr: {
     title: 'Mentions légales',
     sections: [
-      { heading: 'Éditeur du site', body: 'LitigeFlow SAS — Société par Actions Simplifiée au capital de 10 000 €\nSiège social : [Adresse complète], France\nRCS : [Numéro RCS]\nSIRET : [Numéro SIRET]\nTVA intracommunautaire : FR[Numéro TVA]\nDirecteur de la publication : [Nom du dirigeant]' },
+      { heading: 'Éditeur du site', body: 'LitigeFlow SAS  Société par Actions Simplifiée au capital de 10 000 €\nSiège social : [Adresse complète], France\nRCS : [Numéro RCS]\nSIRET : [Numéro SIRET]\nTVA intracommunautaire : FR[Numéro TVA]\nDirecteur de la publication : [Nom du dirigeant]' },
       { heading: 'Contact', body: 'E-mail : contact@litigeflow.com\nTéléphone : +33 (0)1 23 45 67 89\nHoraires : Lundi–Vendredi, 9h–18h (CET)' },
       { heading: 'Hébergement', body: 'Le site est hébergé par Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA.\nBase de données hébergée sur infrastructure PostgreSQL managée (Neon/Supabase).' },
       { heading: 'Propriété intellectuelle', body: 'L\'ensemble des contenus présents sur ce site (textes, images, logos, code source) est protégé par le droit d\'auteur et appartient à LitigeFlow SAS ou à ses partenaires. Toute reproduction est interdite sans autorisation préalable.' },
@@ -23,7 +23,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   en: {
     title: 'Legal Notice',
     sections: [
-      { heading: 'Publisher', body: 'LitigeFlow SAS — Simplified Joint Stock Company\nRegistered office: [Full address], France\nCompany registration: [Registration number]\nPublication director: [Director name]' },
+      { heading: 'Publisher', body: 'LitigeFlow SAS  Simplified Joint Stock Company\nRegistered office: [Full address], France\nCompany registration: [Registration number]\nPublication director: [Director name]' },
       { heading: 'Contact', body: 'Email: contact@litigeflow.com\nPhone: +33 (0)1 23 45 67 89\nHours: Monday–Friday, 9am–6pm (CET)' },
       { heading: 'Hosting', body: 'This site is hosted by Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA.\nDatabase hosted on managed PostgreSQL infrastructure.' },
       { heading: 'Intellectual Property', body: 'All content on this site (texts, images, logos, source code) is protected by copyright and belongs to LitigeFlow SAS or its partners. Any reproduction is prohibited without prior authorization.' },
@@ -34,7 +34,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   es: {
     title: 'Aviso legal',
     sections: [
-      { heading: 'Editor', body: 'LitigeFlow SAS — Sociedad por Acciones Simplificada\nDomicilio social: [Dirección completa], Francia' },
+      { heading: 'Editor', body: 'LitigeFlow SAS  Sociedad por Acciones Simplificada\nDomicilio social: [Dirección completa], Francia' },
       { heading: 'Contacto', body: 'Email: contact@litigeflow.com\nTeléfono: +33 (0)1 23 45 67 89' },
       { heading: 'Alojamiento', body: 'Este sitio está alojado por Vercel Inc., San Francisco, CA, EE.UU.' },
       { heading: 'Propiedad intelectual', body: 'Todos los contenidos están protegidos por derechos de autor y pertenecen a LitigeFlow SAS.' },
@@ -45,7 +45,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   de: {
     title: 'Impressum',
     sections: [
-      { heading: 'Herausgeber', body: 'LitigeFlow SAS — Vereinfachte Aktiengesellschaft\nEingetragener Sitz: [Vollständige Adresse], Frankreich' },
+      { heading: 'Herausgeber', body: 'LitigeFlow SAS  Vereinfachte Aktiengesellschaft\nEingetragener Sitz: [Vollständige Adresse], Frankreich' },
       { heading: 'Kontakt', body: 'E-Mail: contact@litigeflow.com\nTelefon: +33 (0)1 23 45 67 89' },
       { heading: 'Hosting', body: 'Diese Website wird von Vercel Inc., San Francisco, CA, USA gehostet.' },
       { heading: 'Geistiges Eigentum', body: 'Alle Inhalte sind urheberrechtlich geschützt und gehören LitigeFlow SAS.' },

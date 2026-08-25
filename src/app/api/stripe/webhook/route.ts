@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
-  // Handle events — extend once Prisma migration with `plan` field is applied
+  // Handle events  extend once Prisma migration with `plan` field is applied
   switch (event.type) {
     case 'checkout.session.completed':
       console.log('Payment completed:', (event.data.object as Stripe.Checkout.Session).customer_details?.email);

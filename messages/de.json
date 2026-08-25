@@ -15,11 +15,11 @@
     "badge": "🌍 Legale Erstattungs- & Streitplattform",
     "title": "Erhalten Sie Ihre",
     "titleHighlight": "Erstattung",
-    "titleEnd": "— schnell und legal",
+    "titleEnd": " schnell und legal",
     "description": "Händlerstreit, Flugverspätung, Online-Betrug, Bankrückbuchung: LitigeFlow führt Sie zum richtigen Rechtsmittel und verwaltet Ihren Fall von Anfang bis Ende.",
     "cta": "Antrag stellen",
     "ctaSecondary": "Ressourcen ansehen",
-    "trust": "100% legaler Prozess — keine Vorauszahlungen"
+    "trust": "100% legaler Prozess  keine Vorauszahlungen"
   },
   "stats": {
     "recovered": "Für unsere Kunden zurückgeholt",
@@ -61,12 +61,20 @@
   },
   "orienteur": {
     "title": "🧭 Was ist Ihr Rechtsmittel?",
-    "subtitle": "Kostenloser Leitfaden — sofortiges Ergebnis",
+    "subtitle": "Kostenloser Leitfaden  sofortiges Ergebnis",
     "question": "Was ist Ihre Situation?",
     "detail": "Präzisieren Sie Ihre Situation:",
     "results": "Ihre empfohlenen Rechtsmittel:",
     "official": "Offiziell",
-    "cta": "Meinen Fall bei LitigeFlow einreichen"
+    "cta": "Meinen Fall bei LitigeFlow einreichen",
+    "situations": {
+      "merchant": "🛍️ Streit mit einem Händler",
+      "transport": "✈️ Transport-Verspätung / -Annullierung",
+      "scam": "🚨 Online-Betrug / Täuschung",
+      "cashback": "💰 Cashback & Teilerstattung",
+      "health": "🏥 Gesundheitserstattung",
+      "tax": "📋 Steuererstattung"
+    }
   },
   "calculator": {
     "title": "Erstattungsrechner",
@@ -120,7 +128,7 @@
     "ctaPro": "Meinen Fall einreichen",
     "ctaPremium": "Abonnieren",
     "popular": "Am beliebtesten",
-    "noUpfront": "Keine Vorauszahlungen — wir werden bezahlt, wenn Sie es werden"
+    "noUpfront": "Keine Vorauszahlungen  wir werden bezahlt, wenn Sie es werden"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -163,6 +171,52 @@
     "title": "Impressum",
     "privacy": { "title": "Datenschutzrichtlinie" },
     "terms": { "title": "Nutzungsbedingungen" },
-    "cookies": { "title": "Cookie-Richtlinie" }
+    "cookies": { "title": "Cookie-Richtlinie" },
+    "regional": {
+      "EU": {
+        "flightReg": "EG-Verordnung 261/2004",
+        "authorities": ["Verbraucherzentrale", "Europäisches Verbraucherzentrum", "EVZ"],
+        "description": "Europäischer Verbraucherschutz"
+      },
+      "US": {
+        "flightReg": "DOT (Verkehrsministerium)",
+        "authorities": ["FTC", "CFPB", "Better Business Bureau"],
+        "description": "Bundesverbraucherschutz"
+      },
+      "CA": {
+        "flightReg": "APPR (Fluggastrechte-Verordnung)",
+        "authorities": ["CTA", "Wettbewerbsbüro", "Kanadisches Betrugsbekämpfungszentrum"],
+        "description": "Kanadischer Verbraucherschutz"
+      },
+      "UK": {
+        "flightReg": "UK261 (beibehaltenes EU-Recht)",
+        "authorities": ["CAA", "Which?", "Citizens Advice"],
+        "description": "UK-Verbraucherschutz"
+      }
+    }
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "claims": "Anträge",
+    "users": "Benutzer",
+    "chat": "Nachrichten",
+    "analytics": "Analysen",
+    "notifications": "Benachrichtigungen",
+    "settings": "Einstellungen",
+    "totalClaims": "Anträge gesamt",
+    "totalAmount": "Gesamtbetrag",
+    "successRate": "Lösungsquote",
+    "newUsers": "Neue Benutzer",
+    "recentClaims": "Aktuelle Anträge",
+    "activeChats": "Aktive Chats",
+    "performance": "Monatliche Leistung",
+    "viewAll": "Alle anzeigen",
+    "noNotifications": "Keine ungelesenen Benachrichtigungen",
+    "noChats": "Keine aktiven Chats",
+    "reply": "Antworten",
+    "viewCase": "Fall ansehen",
+    "markAllRead": "Alle als gelesen markieren",
+    "pageTitle": "Admin-Dashboard",
+    "pageDesc": "Übersicht über Aktivitäten, Statistiken und Plattformleistung"
   }
 }

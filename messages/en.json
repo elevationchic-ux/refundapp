@@ -15,11 +15,11 @@
     "badge": "🌍 Legal Refund & Dispute Platform",
     "title": "Get your",
     "titleHighlight": "refund",
-    "titleEnd": "— fast and legally",
+    "titleEnd": " fast and legally",
     "description": "Merchant dispute, flight delay, online scam, bank chargeback: LitigeFlow guides you to the right legal remedy and manages your case from start to finish.",
     "cta": "File My Claim",
     "ctaSecondary": "View Resources",
-    "trust": "100% legal process — no upfront fees"
+    "trust": "100% legal process  no upfront fees"
   },
   "stats": {
     "recovered": "Recovered for our clients",
@@ -66,12 +66,20 @@
   },
   "orienteur": {
     "title": "🧭 What is your remedy?",
-    "subtitle": "Free guide — instant result",
+    "subtitle": "Free guide  instant result",
     "question": "What is your situation?",
     "detail": "Specify your situation:",
     "results": "Your recommended remedies:",
     "official": "Official",
-    "cta": "File my case on LitigeFlow"
+    "cta": "File my case on LitigeFlow",
+    "situations": {
+      "merchant": "🛍️ Merchant dispute",
+      "transport": "✈️ Transportation delay / cancellation",
+      "scam": "🚨 Online scam / fraud",
+      "cashback": "💰 Cashback & partial refund",
+      "health": "🏥 Healthcare reimbursement",
+      "tax": "📋 Tax refund"
+    }
   },
   "calculator": {
     "title": "Refund Calculator",
@@ -143,7 +151,7 @@
     "ctaPro": "File My Claim",
     "ctaPremium": "Subscribe",
     "popular": "Most Popular",
-    "noUpfront": "No upfront fees — we get paid when you do"
+    "noUpfront": "No upfront fees  we get paid when you do"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -186,6 +194,52 @@
     "title": "Legal Notice",
     "privacy": { "title": "Privacy Policy" },
     "terms": { "title": "Terms of Service" },
-    "cookies": { "title": "Cookie Policy" }
+    "cookies": { "title": "Cookie Policy" },
+    "regional": {
+      "EU": {
+        "flightReg": "EC Regulation 261/2004",
+        "authorities": ["SignalConso", "European Consumer Centres", "ECC-Net"],
+        "description": "European consumer protection"
+      },
+      "US": {
+        "flightReg": "DOT (Department of Transportation)",
+        "authorities": ["FTC", "CFPB", "Better Business Bureau"],
+        "description": "Federal consumer protection"
+      },
+      "CA": {
+        "flightReg": "APPR (Air Passenger Protection Regulations)",
+        "authorities": ["CTA", "Competition Bureau", "Canadian Anti-Fraud Centre"],
+        "description": "Canadian consumer protection"
+      },
+      "UK": {
+        "flightReg": "UK261 (retained EU law)",
+        "authorities": ["CAA", "Which?", "Citizens Advice"],
+        "description": "UK consumer protection"
+      }
+    }
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "claims": "Claims",
+    "users": "Users",
+    "chat": "Messages",
+    "analytics": "Analytics",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "totalClaims": "Total Claims",
+    "totalAmount": "Total Amount",
+    "successRate": "Resolution Rate",
+    "newUsers": "New Users",
+    "recentClaims": "Recent Claims",
+    "activeChats": "Active Chats",
+    "performance": "Monthly Performance",
+    "viewAll": "View All",
+    "noNotifications": "No unread notifications",
+    "noChats": "No active chats",
+    "reply": "Reply",
+    "viewCase": "View Case",
+    "markAllRead": "Mark all as read",
+    "pageTitle": "Admin Dashboard",
+    "pageDesc": "Overview of platform activity, statistics and performance"
   }
 }
