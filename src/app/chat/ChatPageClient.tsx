@@ -17,6 +17,7 @@ interface Message {
 
 export default function ChatPageClient() {
   const t = useTranslations('chat');
+  const [isMounted, setIsMounted] = useState(false);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -26,8 +27,15 @@ export default function ChatPageClient() {
   const [showInfoForm, setShowInfoForm] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Mount check for hydration
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Initialize visitor session
   useEffect(() => {
+    if (!isMounted) return;
+    
     const initSession = async () => {
       const storedSessionId = localStorage.getItem('visitor_session_id');
       
@@ -61,7 +69,7 @@ export default function ChatPageClient() {
     };
     
     initSession();
-  }, []);
+  }, [isMounted]);
 
   // Fetch messages
   const fetchMessages = useCallback(async () => {
@@ -163,6 +171,11 @@ export default function ChatPageClient() {
       console.error('Failed to update visitor info:', error);
     }
   };
+
+  // Prevent hydration mismatch
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
