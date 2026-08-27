@@ -72,10 +72,8 @@ const TESTIMONIALS = [
 export default function HomeClient() {
   const t = useTranslations();
   const locale = useLocale();
-  const recovered = useCountUp(2400000);
-  const clients = useCountUp(6000);
-  const rate = useCountUp(94);
-
+  const [isMounted, setIsMounted] = useState(false);
+  
   // Dynamic currency based on locale
   const getCurrency = () => {
     if (locale.startsWith('en-US')) return { symbol: '$', amount: 2600000 }; // USD
@@ -85,7 +83,19 @@ export default function HomeClient() {
   };
   
   const currency = getCurrency();
-  const recoveredAmount = useCountUp(currency.amount);
+  const recoveredRaw = useCountUp(currency.amount);
+  const clientsRaw = useCountUp(6000);
+  const rateRaw = useCountUp(94);
+  
+  // Use static values until mounted to prevent hydration mismatch
+  const recoveredAmount = isMounted ? recoveredRaw : currency.amount;
+  const clients = isMounted ? clientsRaw : 6000;
+  const rate = isMounted ? rateRaw : 94;
+  
+  // Mount check for hydration
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const featureKeys = ['analysis', 'portals', 'security', 'tracking'] as const;
   const processKeys = ['step1', 'step2', 'step3'] as const;
