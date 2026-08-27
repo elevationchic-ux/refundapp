@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="152" height="152" viewBox="0 0 152 152">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4f46e5"/>
-      <stop offset="100%" style="stop-color:#7c3aed"/>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="152" height="152" rx="27" fill="url(#g)"/>
-  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
-    font-family="system-ui,sans-serif" font-weight="800" font-size="58"
-    fill="white">LF</text>
+  
+  <circle cx="76" cy="76" r="71.288" fill="url(#bgGradient)"/>
+  <path d="M76 29.64 L112.78399999999999 41.496 L112.78399999999999 77.21600000000001 C112.78399999999999 100.92800000000001 95 118.712 76 124.63999999999999 C57 118.712 39.216 100.92800000000001 39.216 77.21600000000001 L39.216 41.496 Z" fill="url(#shieldGradient)" opacity="0.95"/>
+  <path d="M59.28 77.21600000000001 L71.288 89.07199999999999 L95 59.28" stroke="#6366f1" stroke-width="8.968" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="47.576" cy="53.504" r="2.432" fill="#ffffff" opacity="0.6"/>
+  <circle cx="104.576" cy="53.504" r="2.432" fill="#ffffff" opacity="0.6"/>
+  <circle cx="47.576" cy="100.92800000000001" r="2.432" fill="#ffffff" opacity="0.6"/>
+  <circle cx="104.576" cy="100.92800000000001" r="2.432" fill="#ffffff" opacity="0.6"/>
 </svg>

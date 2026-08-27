@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4f46e5"/>
-      <stop offset="100%" style="stop-color:#7c3aed"/>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="128" height="128" rx="23" fill="url(#g)"/>
-  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
-    font-family="system-ui,sans-serif" font-weight="800" font-size="49"
-    fill="white">LF</text>
+  
+  <circle cx="64" cy="64" r="60.032" fill="url(#bgGradient)"/>
+  <path d="M64 24.96 L94.976 34.944 L94.976 65.024 C94.976 84.992 80 99.968 64 104.96 C48 99.968 33.024 84.992 33.024 65.024 L33.024 34.944 Z" fill="url(#shieldGradient)" opacity="0.95"/>
+  <path d="M49.92 65.024 L60.032 75.008 L80 49.92" stroke="#6366f1" stroke-width="7.552" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="40.064" cy="45.056" r="2.048" fill="#ffffff" opacity="0.6"/>
+  <circle cx="88.064" cy="45.056" r="2.048" fill="#ffffff" opacity="0.6"/>
+  <circle cx="40.064" cy="84.992" r="2.048" fill="#ffffff" opacity="0.6"/>
+  <circle cx="88.064" cy="84.992" r="2.048" fill="#ffffff" opacity="0.6"/>
 </svg>
