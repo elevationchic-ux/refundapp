@@ -6,8 +6,13 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
+import dynamic from 'next/dynamic';
 import '../globals.css';
+
+// Disable SSR for ChatWidget to prevent hydration mismatch
+const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { 
+  ssr: false 
+});
 
 const inter = Inter({ subsets: ['latin'] });
 

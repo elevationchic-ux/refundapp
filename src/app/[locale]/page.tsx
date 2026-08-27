@@ -1,6 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import HomeClient from '@/app/HomeClient';
+import dynamic from 'next/dynamic';
+
+// Disable SSR for HomeClient to prevent hydration mismatch
+const HomeClient = dynamic(() => import('@/app/HomeClient'), { 
+  ssr: false,
+  loading: () => <div className="min-h-screen bg-white" />
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.litigeflow.fr';
 
